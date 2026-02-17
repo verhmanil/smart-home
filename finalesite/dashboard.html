@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+<nav class="navbar">
+<div class="navbar-container">
+<a href="home.html" class="navbar-logo">⌂ בית חכם</a>
+<ul class="navbar-menu">
+<li><a href="home.html" class="nav-link">בית</a></li>
+<li><a href="dashboard.html" class="nav-link active">עמדת נתונים</a></li>
+<li><a href="control.html" class="nav-link">שליטה</a></li>
+<li><a href="cctv.html" class="nav-link">CCTV</a></li>
+<li><a href="index.html" class="nav-link logout">התנתק</a></li>
+</ul>
+</div>
+</nav>
+<header class="top-bar"><h2 class="data-glitch" data-text="עמדת נתונים">עמדת נתונים</h2></header>
+
+<!-- חלקיקי נתונים מרחפים -->
+<div class="data-particles" id="data-particles"></div>
+
+<main class="dashboard-grid">
+<article class="card sensor-card temperature-card" data-sensor="temp">
+<div class="sensor-icon">🌡️</div>
+<h3>טמפרטורה</h3>
+<span class="sensor-value" id="temp" aria-label="ערך טמפרטורה">-- °C</span>
+<div class="sensor-wave"></div>
+</article>
+<article class="card sensor-card humidity-card" data-sensor="humidity">
+<div class="sensor-icon">💧</div>
+<h3>לחות</h3>
+<span class="sensor-value" id="humidity" aria-label="ערך לחות">-- %</span>
+<div class="sensor-wave"></div>
+</article>
+<article class="card sensor-card door-card" data-sensor="door">
+<div class="sensor-icon">🚪</div>
+<h3>דלת</h3>
+<span class="sensor-value" id="door" aria-label="מצב דלת">--</span>
+<div class="sensor-wave"></div>
+</article>
+</main>
+</body>
+</html>
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-database-compat.js"></script>
+<script src="js/dashbors.js"></script>
+<script src="js/dashboard-effects.js"></script>
+<script src="js/navbar-personality.js"></script>
+<script src="js/easter-eggs.js"></script>
